@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 11</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lab11.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 3</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 11</h1></div>
+    <section>
+        <blockquote>
+
+            <p>•	Дан элемент #parent, внутри него дан элемент #child. Дана кнопка. По нажатию на эту кнопку удалите элемент #child.</p>
+            <p>  •	Дан ol. По нажатию на кнопку получите его последнего потомка и удалите его.</p>
+            <p>  •	Дан элемент. Сделайте так, чтобы по нажатию по нему этот элемент удалялся.</p>
+            <p>   •	Дан ol, а внутри него li. Сделайте так, чтобы по нажатию на любую li эта li удалялась.</p>
+            <p>   •	Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут.</p>
+
+        </blockquote>
+        <div><a onclick="q1()" class="button7">Начать 1</a></div>
+        <div>
+            <p id="parent">Родитель <span id="child">Ребёнок</span></p>
+        </div>
+        <div><a onclick="q2()" class="button7">Начать 2</a></div>
+        <ol id="parent1">
+            <li>1 Потомок </li>
+            <li>2 Потомок </li>
+            <li>3 Потомок </li>
+        </ol>
+
+        <p onclick="q3()" id="elem">Нажми на меня</p>
+
+        <div>
+            <ol>
+                <li>Удали меня</li>
+                <li>Удали меня</li>
+                <li>Удали меня</li>
+            </ol>
+        </div>
+        <script>
+            let elems = document.getElementsByTagName('li');
+            for(let i = 0;i < elems.length;i++){
+                elems[i].addEventListener("click", func);
+            }
+            function func() {
+                this.parentElement.removeChild(this);
+            }
+        </script>
+
+
+        <div><input type="text" id="input"><a onclick="q5()" class="button7">Клонировать</a></div>
+    </section>
+
+</div>
+
+
+
+
+
+</body>
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+</html>
